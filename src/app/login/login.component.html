@@ -1,0 +1,29 @@
+<section class="container text-center w-50 mt-5">
+  <form [formGroup] = "loginform" class="example-form" (ngSubmit)="Submit(loginform)">
+
+      <mat-radio-group aria-label="Select an option" formControlName="role">
+        <mat-radio-button class="me-3 mb-3" color="warn" value="admin">Admin</mat-radio-button>
+        <mat-radio-button value="users" color="warn">User</mat-radio-button>
+      </mat-radio-group>
+
+
+    <mat-form-field class="example-full-width w-100" appearance="outline">
+      <mat-label>UserName</mat-label>
+      <input type="text" matInput placeholder="Ex. pat@example.com" formControlName="username">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width w-100" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width w-100" appearance="outline">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput placeholder="Enter your password" formControlName="password">
+    </mat-form-field>
+
+
+    <button class = "w-25" mat-raised-button color="primary" type="submit" [disabled]= "loginform.invalid">submit</button>
+  </form>
+</section>

@@ -1,0 +1,9 @@
+<section class="container mt-5">
+  <section *ngFor="let item of data;" class="mb-5">
+    <h2>UserName <span class = "SpanBlue">:</span> {{item.username}}</h2>
+    <section *ngFor="let items of item.Results;" class="mb-3">
+      <p>Subject  <span class = "SpanBlue">:</span> {{items.subject}}</p>
+      <p>Score  <span class = "SpanBlue">:</span> {{items.score}}</p>
+    </section>
+  </section>
+</section>

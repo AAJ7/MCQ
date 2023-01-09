@@ -1,0 +1,25 @@
+<section *ngIf = "show" class = "subjectBox container mt-5 text-center text-white">
+  <section class ="row">
+    <section class ="col-md-3 col-sm-12" *ngFor="let item of Subjects; let index = index;">
+      <section class ="namesubject rounded-4 p-5" routerLink="/exam/{{item.id}}">
+        <section class = "fs-3 text-center">{{item.SubjectName}}</section>
+      </section>
+      <section class="d-flex justify-content-center" *ngIf = "isloginrole === 'admin'">
+        <button mat-raised-button class="m-1" color="warn" type="button" (click) = "Delete(item.SubjectName)">Delete</button>
+        <button mat-raised-button class="m-1" color="primary" type="button" (click) = "Show(index)">Show</button>
+      </section>
+    </section>
+  </section>
+</section>
+
+<section *ngIf="!show" class="container mt-5 X rounded-4 p-5">
+  <h1 class="text-center mb-5">{{SubjectName}}</h1>
+  <section class="mt-5" *ngFor="let item of Questions; let index = index;">
+    <h2> {{1 + index}} <span class="SpanBlue">)</span> {{item.question}}</h2>
+  <p>A <span class="SpanBlue">)</span> {{item.answer_1}}</p>
+  <p>B <span class="SpanBlue">)</span> {{item.answer_2}}</p>
+  <p>C <span class="SpanBlue">)</span> {{item.answer_3}}</p>
+  <p>D <span class="SpanBlue">)</span> {{item.answer_4}}</p>
+  <P><span class="SpanRed">Correct Answer</span> : {{item.correctAnswer}}</P>
+  </section>
+</section>

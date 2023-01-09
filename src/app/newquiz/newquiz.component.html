@@ -1,0 +1,86 @@
+<section class = "container mt-5">
+  <mat-stepper linear #stepper>
+    <mat-step [stepControl]="form_1" label= "Subject Name" errorMessage="Subject name is required.">
+        <form [formGroup]="form_1" (ngSubmit)="submitForm_1(form_1)" class="mt-5">
+          <ng-template matStepLabel>Fill out subject name</ng-template>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Subject</mat-label>
+          <input type="text" matInput placeholder="Subject Name" formControlName="subject" required>
+        </mat-form-field>
+        <button class="ms-3" matStepperNext mat-raised-button color="warn" type="submit" [disabled]= "form_1.invalid">submit</button>
+        </form>
+    </mat-step>
+
+    <mat-step [completed]="GoToStep_3" errorMessage="Subject questions is required.">
+      <form class="text-center mt-5" [formGroup]="form_2" (ngSubmit)="submitForm_2(form_2)">
+        <ng-template matStepLabel>Questions</ng-template>
+        <mat-form-field class="example-full-width w-75" appearance="outline">
+          <mat-label>Question</mat-label>
+          <input type="text" matInput placeholder="Question" formControlName = "question">
+        </mat-form-field>
+
+        <section class="container">
+          <section class="row">
+            <section class="col-lg-6 col-md-12">
+              <mat-radio-group class="example-radio-group" formControlName = "correctAnswer"><mat-radio-button color="warn" value="answer_1"></mat-radio-button></mat-radio-group>
+              <mat-form-field class="example-full-width w-75" appearance="outline">
+                <mat-label class="ms-auto">Answer 1</mat-label>
+                <input type="text" matInput class="ms-auto" placeholder="Answer 1" formControlName = "answer_1">
+              </mat-form-field>
+            </section>
+            <section class="col-lg-6 col-md-12">
+              <mat-radio-group class="example-radio-group" formControlName = "correctAnswer"><mat-radio-button color="warn" value="answer_2"></mat-radio-button></mat-radio-group>
+              <mat-form-field class="example-full-width w-75" appearance="outline">
+                <mat-label class="ms-auto">Answer 2</mat-label>
+                <input type="text" value="xxxxxx" class="ms-auto" matInput placeholder="Answer 2" formControlName = "answer_2">
+              </mat-form-field>
+            </section>
+            <section class="col-lg-6 col-md-12">
+              <mat-radio-group class="example-radio-group" formControlName = "correctAnswer"><mat-radio-button color="warn" value="answer_3"></mat-radio-button></mat-radio-group>
+              <mat-form-field class="example-full-width w-75" appearance="outline">
+                <mat-label class="ms-auto">Answer 3</mat-label>
+                <input type="text" class="ms-auto" matInput placeholder="Answer 3" formControlName = "answer_3">
+              </mat-form-field>
+            </section>
+            <section class="col-lg-6 col-md-12">
+              <mat-radio-group class="example-radio-group" formControlName = "correctAnswer"><mat-radio-button color="warn" value="answer_4"></mat-radio-button></mat-radio-group>
+              <mat-form-field class="example-full-width w-75" appearance="outline">
+                <mat-label class="ms-auto">Answer 4</mat-label>
+                <input type="text" class="ms-auto" matInput placeholder="Answer 4" formControlName = "answer_4">
+              </mat-form-field>
+            </section>
+
+            <section class="d-flex justify-content-between">
+              <section>
+                <button mat-raised-button color="warn" type= "button" matStepperPrevious (click) = "Reset2(form_1 , form_2)">Back</button>
+                <button class="ms-2" mat-raised-button color="primary" type="button" [disabled] = "form_2.invalid" (click) = "CreateQuestion(form_2)">Save</button>
+              </section>
+              <section>
+                <button class="me-2" mat-raised-button color="warn" type="button" (click) = "Reset(form_2)">Reset</button>
+                <button mat-raised-button [color] = "Color" [type] = "Type" [disabled] = "Ok" matStepperNext>{{Go}}</button>
+              </section>
+            </section>
+          </section>
+        </section>
+      </form>
+    </mat-step>
+
+    <mat-step>
+        <ng-template matStepLabel> Show </ng-template>
+        <section class="container mt-5 w-50">
+          <h1 class="text-center mb-5">{{form_1.value.subject}}</h1>
+          <section class="mt-5" *ngFor="let item of Questions; let index = index;">
+            <h2> {{index + 1}} <span class = "SpanBlue">)</span> {{item.question}}</h2>
+          <p>A <span class="SpanBlue">)</span> {{item.answer_1}}</p>
+          <p>B <span class = "SpanBlue">)</span> {{item.answer_2}}</p>
+          <p>C <span class = "SpanBlue">)</span> {{item.answer_3}}</p>
+          <p>D <span class = "SpanBlue">)</span> {{item.answer_4}}</p>
+          <P><span class = "SpanRed">Correct Answer</span> : {{item.correctAnswer}}</P>
+          <button class="me-2" mat-raised-button matStepperPrevious color = "primary" type="button" (click) ="Update(index)">Update</button>
+          <button  mat-raised-button color = "warn" type="button" (click) = "Delete(index)">Delete</button>
+          </section>
+        </section>
+    </mat-step>
+  </mat-stepper>
+</section>
+

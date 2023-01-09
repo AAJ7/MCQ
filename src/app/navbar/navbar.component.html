@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white fw-bold ms-5" routerLink="home">Aj69</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item ms-auto">
+          <a class="nav-link text-white" *ngIf = "isloginrole === 'admin'" routerLink = "quiz">New Quiz</a>
+        </li>
+        <li class="nav-item ms-auto">
+          <a class="nav-link text-white" *ngIf = "isloginrole === 'admin'" routerLink = "users">Users</a>
+        </li>
+        <li class="nav-item ms-auto">
+          <a class="nav-link text-white"  *ngIf = "isloginrole || isloginrole" routerLink = "subjects">Subjects</a>
+        </li>
+        <li class="nav-item ms-auto ms-5">
+          <a class="nav-link text-white"  *ngIf = "isloginrole || isloginrole">{{isloginusername}}</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item ms-auto">
+          <a class="nav-link text-white" routerLink="login" *ngIf = "!isloginrole">Login</a>
+        </li>
+        <li class="nav-item ms-auto">
+          <a class="nav-link text-white" routerLink ="register" *ngIf = "!isloginrole">Register</a>
+        </li>
+        <li class="nav-item ms-auto">
+          <a class="nav-link text-white" *ngIf = "isloginrole" (click) = "logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>

@@ -1,0 +1,278 @@
+{
+  "users": [
+    {
+      "username": "test",
+      "email": "test@test.com",
+      "password": "test",
+      "id": 1
+    },
+    {
+      "username": "SE",
+      "email": "ax@test.com",
+      "password": "test",
+      "id": 2
+    }
+  ],
+  "admin": [
+    {
+      "username": "admin",
+      "email": "admin@admin.com",
+      "password": "admin",
+      "id": 1
+    }
+  ],
+  "login": [
+    {
+      "username": "admin",
+      "role": "admin",
+      "userID": 1,
+      "id": 1
+    },
+    {
+      "username": "admin",
+      "role": "admin",
+      "userID": 1,
+      "id": 2
+    },
+    {
+      "username": "admin",
+      "role": "admin",
+      "userID": 1,
+      "id": 3
+    },
+    {
+      "username": "admin",
+      "role": "admin",
+      "userID": 1,
+      "id": 4
+    },
+    {
+      "username": "admin",
+      "role": "admin",
+      "userID": 1,
+      "id": 5
+    },
+    {
+      "username": "admin",
+      "role": "admin",
+      "userID": 1,
+      "id": 6
+    },
+    {
+      "username": "test",
+      "role": "users",
+      "userID": 1,
+      "id": 7
+    },
+    {
+      "username": "admin",
+      "role": "admin",
+      "userID": 1,
+      "id": 8
+    },
+    {
+      "username": "admin",
+      "role": "admin",
+      "userID": 1,
+      "id": 9
+    },
+    {
+      "username": "admin",
+      "role": "admin",
+      "userID": 1,
+      "id": 10
+    },
+    {
+      "username": "test",
+      "role": "users",
+      "userID": 1,
+      "id": 11
+    }
+  ],
+  "subjects": [
+    {
+      "SubjectName": "Angular",
+      "Questions": [
+        {
+          "question": "AngularJS is a ____",
+          "answer_1": "JAVA Framework",
+          "answer_2": "Javascript Framework",
+          "answer_3": "HTML Framework",
+          "answer_4": "SQL Framework",
+          "correctAnswer": "Javascript Framework"
+        },
+        {
+          "question": "AngularJS is perfect for?",
+          "answer_1": "MPAs",
+          "answer_2": "DPAs",
+          "answer_3": "CPAs",
+          "answer_4": "SPAs",
+          "correctAnswer": "SPAs"
+        },
+        {
+          "question": "Among the following, on which architectural pattern is AngularJS based?",
+          "answer_1": "Decorator pattern",
+          "answer_2": "Observer pattern",
+          "answer_3": "MVVM architecture pattern",
+          "answer_4": "MVC architecture pattern",
+          "correctAnswer": "MVVM architecture pattern"
+        },
+        {
+          "question": "Choose the correct syntax for writing AngularJS expression.",
+          "answer_1": "[expression]",
+          "answer_2": "{{expressions}}",
+          "answer_3": "{{{expressions}}}",
+          "answer_4": "{expressions}",
+          "correctAnswer": "{{expressions}}"
+        },
+        {
+          "question": "Choose the reactor which is used to bind the application data to the HTML view in AngularJS.",
+          "answer_1": "ng-bind directive",
+          "answer_2": "ng-model directive",
+          "answer_3": "ng-init directive",
+          "answer_4": "ng-app directive",
+          "correctAnswer": "ng-bind directive"
+        },
+        {
+          "question": "Choose the correct statement about the lowercase filter.",
+          "answer_1": "it is a function that takes text as input",
+          "answer_2": "the lowercase filter converts a text to lowercase text",
+          "answer_3": "both a and b",
+          "answer_4": "none of the above",
+          "correctAnswer": "the lowercase filter converts a text to lowercase text"
+        },
+        {
+          "question": "Choose the advantage of Angular JS among the following.",
+          "answer_1": "it provides reusable components",
+          "answer_2": "it uses dependency injection and makes use of separation of concerns",
+          "answer_3": "it is unit-testable",
+          "answer_4": "all of the above",
+          "correctAnswer": "all of the above"
+        },
+        {
+          "question": "The functionality of angular controllers in the application is",
+          "answer_1": "an angular controller is used for displaying the data",
+          "answer_2": "an angular controller is used for controlling the data",
+          "answer_3": "both a and b",
+          "answer_4": "None of the above",
+          "correctAnswer": "an angular controller is used for controlling the data"
+        },
+        {
+          "question": "What is not present in the dependencies section of package.json ?",
+          "answer_1": "Ongtsc",
+          "answer_2": "Obazel",
+          "answer_3": "Ongcc",
+          "answer_4": "None of these",
+          "correctAnswer": "Ongtsc"
+        },
+        {
+          "question": "If we need to opt out type-checking in TypeScript to store any value in a variable whose type is not known right away, We can use?",
+          "answer_1": "void keyword",
+          "answer_2": "any keyword",
+          "answer_3": "null keyword",
+          "answer_4": "None of these",
+          "correctAnswer": "any keyword"
+        },
+        {
+          "question": "Under the default implementation of ErrorHandler prints error messages to",
+          "answer_1": "the text file",
+          "answer_2": "None of these",
+          "answer_3": "the console",
+          "answer_4": "the log file",
+          "correctAnswer": "the console"
+        },
+        {
+          "question": "How to install TypeScript transpiler ?",
+          "answer_1": "Either using Visual Studio or npm",
+          "answer_2": "None of these",
+          "answer_3": "using Visual Studio",
+          "answer_4": "using npm",
+          "correctAnswer": "Either using Visual Studio or npm"
+        },
+        {
+          "question": "What is a valid string type in TypeScript ?",
+          "answer_1": "bookName = 'Angular IJI Development';",
+          "answer_2": "None of these",
+          "answer_3": "B0th are valid - var bookName: string = 'Angular'; and bookName = 'Angular IJI Development';",
+          "answer_4": "var bookName: string = 'Angular';",
+          "correctAnswer": "None of these"
+        },
+        {
+          "question": "Which command is used to manually compile a TypeScript source file into ES6, if using Typescript",
+          "answer_1": "tsc",
+          "answer_2": "Typescript",
+          "answer_3": "node",
+          "answer_4": "typescript",
+          "correctAnswer": "tsc"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "SubjectName": "Javascript",
+      "Questions": [
+        {
+          "question": "Javascript is an _______ language?",
+          "answer_1": "Object-Oriented",
+          "answer_2": "Object-Based",
+          "answer_3": "Procedural",
+          "answer_4": "None of above",
+          "correctAnswer": "Object-Oriented"
+        },
+        {
+          "question": "Which of the following keywords is used to define a variable in Javascript?",
+          "answer_1": "var",
+          "answer_2": "let",
+          "answer_3": "Both A and B",
+          "answer_4": "None of above",
+          "correctAnswer": "Both A and B"
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "UsersSubjects": [
+    {
+      "username": "admin",
+      "role": "admin",
+      "userID": 1,
+      "id": 1
+    },
+    {
+      "username": "admin",
+      "role": "admin",
+      "userID": 1,
+      "id": 2
+    },
+    {
+      "username": "test",
+      "role": "users",
+      "userID": 1,
+      "id": 3
+    },
+    {
+      "username": "admin",
+      "role": "admin",
+      "userID": 1,
+      "id": 4
+    },
+    {
+      "username": "admin",
+      "role": "admin",
+      "userID": 1,
+      "id": 5
+    },
+    {
+      "username": "admin",
+      "role": "admin",
+      "userID": 1,
+      "id": 6
+    },
+    {
+      "username": "test",
+      "role": "users",
+      "userID": 1,
+      "id": 7
+    }
+  ]
+}

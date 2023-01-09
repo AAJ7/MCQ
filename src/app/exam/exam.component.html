@@ -1,0 +1,17 @@
+<section class="container mt-5 w-50" *ngIf="Res">
+  <h2 class = " mb-5 text-center">{{SubjectName}}</h2>
+  <form [formGroup]="FormRadio" class="example-form" (ngSubmit)="Submit(FormRadio)">
+    <label id="example-radio-group-label">{{Question}}</label>
+    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" formControlName = "Radio">
+      <mat-radio-button class = "example-radio-button" [value] = "A1" *ngIf = "Radio">{{A1}}</mat-radio-button>
+      <mat-radio-button class = "example-radio-button" [value] = "A2" *ngIf = "Radio">{{A2}}</mat-radio-button>
+      <mat-radio-button class = "example-radio-button" [value] = "A3" *ngIf = "Radio">{{A3}}</mat-radio-button>
+      <mat-radio-button class = "example-radio-button" [value] = "A4" *ngIf = "Radio">{{A4}}</mat-radio-button>
+    </mat-radio-group>
+    <section class = "text-end"><button mat-raised-button color = "warn" type = "submit" [disabled] = "close" *ngIf = "Radio">submit</button></section>
+  </form>
+</section>
+<section *ngIf="!Res" class="container mt-5 p-5 rounded-5 w-50">
+  <h2 class="text-center">{{Result}} %</h2>
+  <section class = "text-center"><button mat-raised-button color = "warn" type = "button" (click) = "BacktoSubjects()">Back to subjects</button></section>
+</section>

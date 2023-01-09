@@ -1,0 +1,70 @@
+<section class="container mt-5 w-50 text-center">
+  <form [formGroup] = "registerform" class="example-form" (ngSubmit)="Submit(registerform)">
+
+    <mat-form-field class="example-full-width w-100" appearance="outline">
+      <mat-label>Username</mat-label>
+      <input type="text" matInput placeholder="Username" formControlName="username">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width w-100" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
+    </mat-form-field>
+
+
+    <!-- <section *ngIf="registerform.get('email')?.errors">
+      <mat-error class="mb-3" *ngIf="registerform.get('email')?.errors?.['email']"> Please enter a valid email address </mat-error>
+    </section> -->
+
+
+    <mat-form-field class="example-full-width w-100" appearance="outline">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput placeholder="Enter your password" formControlName="password">
+    </mat-form-field>
+    <!-- <section *ngIf="registerform.get('password')?.errors">
+      <section *ngIf="registerform.get('password')?.errors?.['minlength']">
+        <mat-error class="mb-3">
+          The actualLength is {{registerform.get('password')?.errors?.['minlength'].actualLength}}
+          and
+          The requiredLength is {{registerform.get('password')?.errors?.['minlength'].requiredLength}}
+        </mat-error>
+      </section>
+      <section *ngIf="registerform.get('password')?.errors?.['maxlength']">
+        <mat-error class="mb-3">
+          The actualLength is {{registerform.get('password')?.errors?.['maxlength'].actualLength}}
+          and
+          The requiredLength is {{registerform.get('password')?.errors?.['maxlength'].requiredLength}}
+        </mat-error>
+        <mat-error *ngIf="registerform.value.password != registerform.value.confirmpassword">dfsgfg</mat-error>
+      </section>
+    </section> -->
+
+
+    <mat-form-field class="example-full-width w-100" appearance="outline">
+      <mat-label>Confirm Password</mat-label>
+      <input type="password" matInput placeholder="Confirm your password " formControlName="confirmpassword">
+    </mat-form-field>
+
+    <!-- <section *ngIf="registerform.get('confirmpassword')?.errors">
+      <section *ngIf="registerform.get('confirmpassword')?.errors?.['minlength']">
+        <mat-error class="mb-3">
+          The actualLength is {{registerform.get('confirmpassword')?.errors?.['minlength'].actualLength}}
+          and
+          The requiredLength is {{registerform.get('confirmpassword')?.errors?.['minlength'].requiredLength}}
+        </mat-error>
+      </section>
+      <section *ngIf="registerform.get('password')?.errors?.['maxlength']">
+        <mat-error class="mb-3">
+          The actualLength is {{registerform.get('confirmpassword')?.errors?.['maxlength'].actualLength}}
+          and
+          The requiredLength is {{registerform.get('confirmpassword')?.errors?.['maxlength'].requiredLength}}
+        </mat-error>
+      </section>
+    </section> -->
+
+    <button class="w-25" mat-raised-button color="primary" type="submit" [disabled]= "registerform.invalid|| (registerform.value.password != registerform.value.confirmpassword)">submit</button>
+    <!-- registerform.get('email')?.status != 'VALID' || registerform.get('password')?.status != 'VALID' -->
+  </form>
+</section>
+
+
